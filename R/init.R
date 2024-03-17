@@ -16,7 +16,7 @@ init <- function() {
     message("You've already initiated.")
   } else {
     setwd(wd)
-    system("./configure CC=gcc-13")
+    system("./configure")
     system("make -j2")
     system("./ct-cbn -h")
     setwd(currentWd)
