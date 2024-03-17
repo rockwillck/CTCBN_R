@@ -1,0 +1,14 @@
+Package: ctcbn
+Type: Package
+Title: An R implementation of the CT-CBN library.
+Version: 0.1.0
+Author: William Choi-Kim
+Maintainer: William Choi-Kim <william@williamck.com>
+Description: CT-​CBN is a collection of two C programs, ct-​cbn and h-​cbn, that implement algorithms for model selection and maximum likelihood parameter estimation for continuous time conjunctive Bayesian networks. These graphical models have been designed to model the accumulation of mutations subject to constraints on the order in which the mutations can occur. The order constraints are encoded as a partially ordered set (poset) of genetic events. The waiting time for each event follows an independent exponential distribution. 
+    The original ct-​cbn program by Beerenwinkel and Sullivant (2009) implements selection of an optimal poset and estimation of exponential rates from censored data consisting only of the observed mutational patterns. 
+    The hidden conjunctive Bayesian network model h-​cbn accounts for noisy genotype observations (Gerstung et al., 2009). It also implemented a simulated annealing algorithm for structure search, a denoising of the genotypes via the maximum a posteriori (MAP) estimates, and the computation of the most likely progression.
+License: GPLv3
+Encoding: UTF-8
+LazyData: true
+inst/extdata: file_list.txt
+RoxygenNote: 7.2.3
