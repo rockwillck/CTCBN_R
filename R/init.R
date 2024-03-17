@@ -18,7 +18,15 @@ init <- function() {
     setwd(wd)
     system("./configure")
     system("make -j2")
-    system("./ct-cbn -h")
+    tryCatch(
+      {
+        system("./ct-cbn -h", intern = TRUE)
+      }, error = function(msg){
+        system("./configure CC=gcc-13")
+        system("make -j2")
+        system("./ct-cbn -h", intern = TRUE)
+      }
+    )
     setwd(currentWd)
   }
 }
